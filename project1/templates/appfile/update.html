@@ -1,0 +1,22 @@
+<html>
+<head>
+	<title> </title>
+	<!--Latest compiled and minified CSS-->
+
+</head>
+<center>
+<body>
+<h2>UPDATE STUDENT INFORMATION</h2>
+<form method="POST">
+	{%csrf_token%}
+	Student Number: <input type="text" name="sno" value="{{s.sno}}"><br>
+	Student Name: <input type="text" name="sname" value="{{s.sname}}"><br>
+	Student salary: <input type="text" name="ssalary" value="{{s.ssalary}}"><br>
+	Student address: <input type="text" name="saddress" value="{{s.saddress}}"><br>
+
+	<button type="submit" values="UPDATE RECORD">
+
+</form>
+</body>
+</center>
+</html>

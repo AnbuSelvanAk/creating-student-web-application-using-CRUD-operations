@@ -1,0 +1,33 @@
+<html>
+<head>
+<title>Student Information</title>
+</head>
+<body>
+<center>
+<h1>STUDENT INFORMATION</h1>
+{% if s %}
+<table border=5px;>
+<thead>
+<th>STUDENT NO</th>
+<th>STUDENT NAME</th>
+<th>STUDENT SALARY</th>
+<th>STUDENT ADDRESS</th>\
+<th>Actions</th>
+</thead>
+{% for x in s %}
+
+<tr>
+<td>{{x.sno}}</td>
+<td>{{x.sname | title}}</td>
+<td>{{x.ssalary}}</td>
+<td>{{x.saddress}}</td>
+<td><a href="/update/{{x.id}}">Update</a> | <a href="/delete/{{x.id}}">Delete</a></td>
+</tr>
+{% endfor %}
+</table>
+{% else %}
+<p> NO RECORD FOUND</p>
+{% endif %}
+</center>
+</body>
+</html> 
